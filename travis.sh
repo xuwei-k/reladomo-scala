@@ -11,6 +11,7 @@ if [[ ${TRAVIS_SCALA_VERSION} = "scripted-test" ]]; then
   && sbt clean "project reladomoScalaTwitterCommon" +publishLocal \
   && sbt clean \
       "project sbtReladomoPlugin" \
+      "^^ 1.0.1" \
       "test" \
       "scripted" \
       "^publishLocal" \
