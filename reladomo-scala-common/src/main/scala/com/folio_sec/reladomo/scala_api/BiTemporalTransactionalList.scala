@@ -26,16 +26,16 @@ import scala.collection.JavaConverters._
   * Represents a Scala facade of Reladomo's MithraTransactionalList.
   * The type must provide a MithraTransactionalList which is consistent with the Scala object's state.
   */
-trait BiTemporalTransactionalList[TxObject <: BiTemporalTransactionalObject,
+   trait BiTemporalTransactionalList[TxObject <: BiTemporalTransactionalObject,
                                   MithraTxObject <: com.gs.fw.common.mithra.MithraDatedTransactionalObject]
     extends BiTemporalTransactionalListBase[TxObject, MithraTxObject] { self =>
 
   /**
     * Returns consistent MithraTransactionalList
     */
-  def underlying: com.gs.fw.common.mithra.MithraDatedTransactionalList[MithraTxObject]
+    def underlying: com.gs.fw.common.mithra.MithraDatedTransactionalList[MithraTxObject]
 
-  def toScalaObject(mithraTxObject: MithraTxObject): TxObject
+ def toScalaObject(mithraTxObject: MithraTxObject): TxObject
 
   // DomainList[MithraTxObject]
 
