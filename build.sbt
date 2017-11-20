@@ -16,6 +16,7 @@ lazy val baseSettings = Seq(
 )
 
 lazy val reladomoScalaCommon = (project in file("reladomo-scala-common"))
+  .disablePlugins(ScriptedPlugin)
   .settings(baseSettings)
   .settings(
     name := "reladomo-scala-common",
@@ -38,6 +39,7 @@ lazy val reladomoScalaCommon = (project in file("reladomo-scala-common"))
   .settings(MimaSettings.mimaSettings)
 
 lazy val reladomoScalaTwitterCommon = (project in file("reladomo-scala-twitter-common"))
+  .disablePlugins(ScriptedPlugin)
   .settings(baseSettings)
   .settings(
     normalizedName := s"reladomo-scala-twitter-${twitterUtilBinVersion}-common",
@@ -56,7 +58,6 @@ lazy val reladomoScalaTwitterCommon = (project in file("reladomo-scala-twitter-c
   .settings(MimaSettings.mimaSettings)
 
 lazy val sbtReladomoPlugin = (project in file("sbt-reladomo-plugin"))
-  .enablePlugins(ScriptedPlugin)
   .settings(baseSettings)
   .settings(
     name := "sbt-reladomo-plugin",
