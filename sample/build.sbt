@@ -15,9 +15,9 @@ lazy val root = (project in file("."))
       "com.goldmansachs.reladomo" % "reladomo"                                       % reladomoV,
       "com.goldmansachs.reladomo" % "reladomo-serial"                                % reladomoV % "test",
       "com.goldmansachs.reladomo" % "reladomo-test-util"                             % reladomoV % "test",
-      "org.scalikejdbc"           %% "scalikejdbc"                                   % "3.0.2" % "test",
-      "com.h2database"            % "h2"                                             % "1.4.196" % "test",
-      "org.scalatest"             %% "scalatest"                                     % "3.0.4" % "test"
+      "org.scalikejdbc"           %% "scalikejdbc"                                   % "3.2.3" % "test",
+      "com.h2database"            % "h2"                                             % "1.4.197" % "test",
+      "org.scalatest"             %% "scalatest"                                     % "3.0.5" % "test"
     ),
     reladomoScalaApiFutureType in Compile := "twitter",
     scalafmtOnCompile := true
